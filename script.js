@@ -111,5 +111,29 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
+    // 百度搜索引擎推送功能
+    function pushToBaidu(url) {
+        const apiUrl = 'http://data.zz.baidu.com/urls?site=www.walankaai.com&token=qY25KMcQC6thjZzh';
+        
+        fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain'
+            },
+            body: url
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('百度推送结果:', data);
+        })
+        .catch(error => {
+            console.error('百度推送失败:', error);
+        });
+    }
+
+    // 页面加载时推送当前页面
+    const currentUrl = window.location.href;
+    pushToBaidu(currentUrl);
+
     console.log('Walanka AI Website Loaded Successfully!');
 });
