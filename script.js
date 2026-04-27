@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 百度搜索引擎推送功能
     function pushToBaidu(url) {
-        const apiUrl = 'http://localhost:5000/api/baidu-push';
+        const apiUrl = '/api/baidu-push';
         
         fetch(apiUrl, {
             method: 'POST',
