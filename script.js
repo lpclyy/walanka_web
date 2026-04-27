@@ -113,21 +113,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 百度搜索引擎推送功能
     function pushToBaidu(url) {
-        const apiUrl = 'http://data.zz.baidu.com/urls?site=www.walankaai.com&token=qY25KMcQC6thjZzh';
+        const apiUrl = 'http://localhost:5000/api/baidu-push';
         
         fetch(apiUrl, {
             method: 'POST',
             headers: {
-                'Content-Type': 'text/plain'
+                'Content-Type': 'application/json'
             },
-            body: url
+            body: JSON.stringify({ url: url })
         })
         .then(response => response.json())
         .then(data => {
-            console.log('百度推送结果:', data);
+            if (data.success) {
+                console.log('百度推送成功:', data.data);
+            } else {
+                console.error('百度推送失败:', data.error);
+            }
         })
         .catch(error => {
-            console.error('百度推送失败:', error);
+            console.error('百度推送请求失败:', error);
         });
     }
 
