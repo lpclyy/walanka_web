@@ -1,14 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     let lastScrollY = window.scrollY;
+    let isHidden = false;
 
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
+        const currentScrollY = window.scrollY;
+        
+        // 下滑时隐藏导航栏
+        if (currentScrollY > lastScrollY && currentScrollY > 100 && !isHidden) {
+            navbar.classList.add('hidden');
+            isHidden = true;
+        }
+        // 上滑时显示导航栏
+        else if (currentScrollY < lastScrollY && isHidden) {
+            navbar.classList.remove('hidden');
+            isHidden = false;
+        }
+        
+        // 滚动超过100px时添加阴影
+        if (currentScrollY > 100) {
             navbar.style.boxShadow = '0 8px 32px rgba(12, 74, 110, 0.15)';
         } else {
             navbar.style.boxShadow = '0 4px 24px rgba(12, 74, 110, 0.1)';
         }
-        lastScrollY = window.scrollY;
+        
+        lastScrollY = currentScrollY;
     });
 
     const navLinks = document.querySelectorAll('.nav-link');
