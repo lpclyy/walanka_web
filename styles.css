@@ -269,9 +269,14 @@ body {
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.about-text {
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
 }
 
 .about-description {
@@ -304,54 +309,52 @@ body {
     color: var(--text-light);
 }
 
-.mission {
-    padding: 120px 0;
-    background: linear-gradient(135deg, var(--primary) 0%, #0284C7 100%);
-}
-
-.mission .section-title {
-    color: var(--white);
-    text-align: center;
-}
-
-.mission-grid {
+.about-mission {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
+    gap: 32px;
+    padding-top: 64px;
+    border-top: 1px solid rgba(14, 165, 233, 0.1);
 }
 
 .mission-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 48px;
+    background: linear-gradient(135deg, var(--bg) 0%, rgba(14, 165, 233, 0.05) 100%);
+    padding: 40px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(12, 74, 110, 0.08);
 }
 
 .mission-icon {
     width: 64px;
     height: 64px;
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
 }
 
 .mission-title {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--text);
     margin-bottom: 16px;
 }
 
 .mission-content {
     font-size: 1rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-light);
 }
 
 .service-badge {
