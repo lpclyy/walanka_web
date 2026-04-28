@@ -263,6 +263,108 @@ body {
     color: var(--text-light);
 }
 
+.about {
+    padding: 120px 0;
+    background: var(--white);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-description {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 64px;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.mission {
+    padding: 120px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, #0284C7 100%);
+}
+
+.mission .section-title {
+    color: var(--white);
+    text-align: center;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 48px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mission-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.mission-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.mission-content {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.service-badge {
+    display: inline-block;
+    background: var(--cta);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
 .services {
     padding: 120px 0;
     background: var(--white);
@@ -270,7 +372,7 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
 }
 
@@ -456,7 +558,7 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 8px;
-    color: var(--text);
+    color: #000000 !important;
 }
 
 .contact-value {
@@ -525,7 +627,7 @@ body {
     margin: 0 auto;
 }
 
-.contact-title {
+.contact-content .contact-title {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 3rem;
     font-weight: 700;

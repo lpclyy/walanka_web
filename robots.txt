@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: http://walankaai.com/sitemap.xml
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: http://www.walankaai.com/sitemap.xml
+Host: www.walankaai.com
