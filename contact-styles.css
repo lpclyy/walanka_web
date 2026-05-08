@@ -1,24 +1,25 @@
 :root {
-    --contact-primary: #6366F1;
-    --contact-secondary: #8B5CF6;
-    --contact-accent: #EC4899;
-    --contact-bg: #0F172A;
-    --contact-surface: #1E293B;
-    --contact-surface-light: #334155;
-    --contact-text: #F1F5F9;
-    --contact-text-light: #94A3B8;
+    --contact-primary: #0EA5E9;
+    --contact-secondary: #38BDF8;
+    --contact-accent: #0284C7;
+    --contact-bg: #FAFBFC;
+    --contact-surface: #FFFFFF;
+    --contact-surface-light: #F1F5F9;
+    --contact-text: #0C4A6E;
+    --contact-text-light: #64748B;
+    --contact-border: #E2E8F0;
 }
 
 .contact-page {
-    background: linear-gradient(135deg, var(--contact-bg) 0%, #1E1B4B 50%, #0F172A 100%);
+    background: var(--contact-bg);
     color: var(--contact-text);
     min-height: 100vh;
 }
 
 .contact-page .navbar {
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    border-bottom: 1px solid var(--contact-border);
 }
 
 .contact-page .nav-link {
@@ -36,107 +37,111 @@
 }
 
 .contact-page .hero {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    background: linear-gradient(135deg, #F0F9FF 0%, var(--contact-bg) 100%);
+    padding: 40px 0;
 }
 
 .contact-page .hero-title {
     color: var(--contact-text);
+    margin-bottom: 12px;
 }
 
 .contact-page .hero-subtitle {
     color: var(--contact-text-light);
+    margin-top: 0;
 }
 
 .visual-glow-contact {
-    background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%);
+    background: radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
 }
 
 .visual-grid-contact {
     background-image: 
-        linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+        linear-gradient(rgba(14, 165, 233, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
     background-size: 40px 40px;
 }
 
 .contact-main {
-    padding: 60px 0;
+    padding: 40px 0 60px;
 }
 
 .contact-layout {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 40px;
+    gap: 32px;
 }
 
 .contact-info-panel {
     background: var(--contact-surface);
-    border-radius: 24px;
-    padding: 40px;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 20px;
+    padding: 32px;
+    border: 1px solid var(--contact-border);
+    box-shadow: 0 4px 20px rgba(12, 74, 110, 0.05);
 }
 
 .contact-info-panel .panel-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     font-weight: 600;
     color: var(--contact-text);
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .contact-info-panel .contact-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 20px;
 }
 
 .contact-info-panel .contact-item {
-    background: rgba(99, 102, 241, 0.05);
-    padding: 24px;
-    border-radius: 16px;
+    background: var(--contact-surface-light);
+    padding: 20px;
+    border-radius: 14px;
     text-align: center;
-    border: 1px solid rgba(99, 102, 241, 0.1);
 }
 
 .contact-info-panel .contact-icon {
     color: var(--contact-primary);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .contact-info-panel .contact-title {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     font-weight: 600;
     color: var(--contact-text-light);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .contact-info-panel .contact-value {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--contact-text);
     margin: 0;
 }
 
 .chat-panel {
     background: var(--contact-surface);
-    border-radius: 24px;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 20px;
+    border: 1px solid var(--contact-border);
+    box-shadow: 0 4px 20px rgba(12, 74, 110, 0.05);
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 550px;
     overflow: hidden;
 }
 
 .chat-header {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 24px;
-    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-    background: rgba(99, 102, 241, 0.05);
+    gap: 14px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--contact-border);
+    background: linear-gradient(135deg, var(--contact-bg), var(--contact-surface));
 }
 
 .chat-avatar {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     background: linear-gradient(135deg, var(--contact-primary), var(--contact-secondary));
-    border-radius: 14px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,25 +154,25 @@
 }
 
 .chat-title {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--contact-text);
     margin: 0;
 }
 
 .chat-status {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     color: #10B981;
     margin: 4px 0 0;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
 }
 
 .chat-status::before {
     content: '';
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background: #10B981;
     border-radius: 50%;
     animation: pulse 2s infinite;
@@ -183,11 +188,11 @@
 }
 
 .menu-btn {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border: none;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
+    background: var(--contact-surface-light);
+    border-radius: 10px;
     color: var(--contact-text-light);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -197,36 +202,36 @@
 }
 
 .menu-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--contact-text);
+    background: var(--contact-primary);
+    color: white;
 }
 
 .chat-messages {
     flex: 1;
-    padding: 24px;
+    padding: 20px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
 .chat-messages::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
 }
 
 .chat-messages::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--contact-surface-light);
     border-radius: 3px;
 }
 
 .chat-messages::-webkit-scrollbar-thumb {
-    background: rgba(99, 102, 241, 0.5);
+    background: rgba(14, 165, 233, 0.4);
     border-radius: 3px;
 }
 
 .message {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 .message.bot-message {
@@ -239,10 +244,10 @@
 }
 
 .message-avatar {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background: linear-gradient(135deg, var(--contact-primary), var(--contact-secondary));
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,21 +257,21 @@
 
 .message-content {
     max-width: 70%;
-    padding: 16px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 0 20px 20px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 18px;
+    background: var(--contact-surface-light);
+    border-radius: 0 16px 16px 16px;
+    border: 1px solid rgba(14, 165, 233, 0.1);
 }
 
 .message-content.user-content {
     background: linear-gradient(135deg, var(--contact-primary), var(--contact-secondary));
-    border-radius: 20px 0 20px 20px;
+    border-radius: 16px 0 16px 16px;
     border: none;
 }
 
 .message-content p {
     margin: 0;
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     color: var(--contact-text);
 }
@@ -276,32 +281,32 @@
 }
 
 .chat-input-area {
-    padding: 20px 24px;
-    border-top: 1px solid rgba(99, 102, 241, 0.2);
-    background: rgba(99, 102, 241, 0.03);
+    padding: 16px 20px;
+    border-top: 1px solid var(--contact-border);
+    background: var(--contact-bg);
 }
 
 .input-wrapper {
     display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
 .input-wrapper input {
     flex: 1;
-    padding: 16px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    border-radius: 16px;
+    padding: 14px 18px;
+    background: var(--contact-surface);
+    border: 1px solid var(--contact-border);
+    border-radius: 14px;
     color: var(--contact-text);
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
     outline: none;
     transition: all 0.2s ease;
 }
 
 .input-wrapper input:focus {
     border-color: var(--contact-primary);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.08);
 }
 
 .input-wrapper input::placeholder {
@@ -309,11 +314,11 @@
 }
 
 .send-btn {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
     background: linear-gradient(135deg, var(--contact-primary), var(--contact-secondary));
     border: none;
-    border-radius: 16px;
+    border-radius: 14px;
     color: white;
     cursor: pointer;
     display: flex;
@@ -325,7 +330,7 @@
 
 .send-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
 }
 
 .send-btn:active {
@@ -335,34 +340,34 @@
 .quick-questions {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .quick-label {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     color: var(--contact-text-light);
 }
 
 .quick-btn {
-    padding: 8px 16px;
-    background: rgba(99, 102, 241, 0.15);
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    border-radius: 20px;
+    padding: 7px 14px;
+    background: rgba(14, 165, 233, 0.08);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 16px;
     color: var(--contact-text);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .quick-btn:hover {
-    background: rgba(99, 102, 241, 0.25);
+    background: rgba(14, 165, 233, 0.15);
     border-color: var(--contact-primary);
 }
 
 .footer-contact {
-    background: rgba(15, 23, 42, 0.95);
-    border-top: 1px solid rgba(99, 102, 241, 0.2);
+    background: var(--contact-surface);
+    border-top: 1px solid var(--contact-border);
 }
 
 .footer-contact .footer-title {
@@ -391,7 +396,7 @@
 
 .footer-contact .footer-bottom {
     color: var(--contact-text-light);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--contact-border);
 }
 
 @media (max-width: 1024px) {
@@ -404,7 +409,7 @@
     }
     
     .chat-panel {
-        height: 500px;
+        height: 480px;
     }
     
     .message-content {
