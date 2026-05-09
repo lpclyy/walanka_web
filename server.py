@@ -1,12 +1,25 @@
-from flask import Flask, request, jsonify, Response
+from flask import Flask, request, jsonify, Response, send_from_directory
 import requests
 from flask_cors import CORS
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from xml.dom import minidom
+import os
 
 app = Flask(__name__)
 CORS(app)
+
+# 确保当前目录
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# 提供静态HTML文件
+@app.route('/')
+def index():
+    return send_from_directory(BASE_DIR, 'index.html')
+
+@app.route('/<path:filename>')
+def serve_static(filename):
+    return send_from_directory(BASE_DIR, filename)
 
 # 百度推送接口配置
 BAIDU_API_URL = 'http://data.zz.baidu.com/urls?site=www.walankaai.com&token=qY25KMcQC6thjZzh'

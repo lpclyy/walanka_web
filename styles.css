@@ -128,7 +128,8 @@ body {
 }
 
 .hero {
-    min-height: 100vh;
+    max-height: 800px;
+    min-height: 0;
     display: flex;
     align-items: center;
     position: relative;
@@ -138,7 +139,7 @@ body {
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 50px 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 64px;
@@ -777,5 +778,4 @@ body {
         width: 100%;
         text-align: center;
     }
-} 
- 
+}
